@@ -19,11 +19,41 @@
 </head>
 <meta charset=”UTF-8”>
 <body>
-<div style="text-align: center;">
     <br>
     <br>
     <br>
     <h1 style = "text-align:center;"> Contact Us </h1>
-    <p style = "text-align:center;">
+    <div align="center">
+    <form action="">
+        First name:<br>
+        <input type="text" name="firstname"><br><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br><br>
+        Phone Number:<br>
+        <input type="number" name="phonenumber"><br><br>
+        Email:<br>
+        <input type="text" name="email"><br><br>
+        Reason:
+        <input type="radio" name="reason" value="question" checked> Question
+        <input type="radio" name="reason" value="problem"> Problem
+        <input type="radio" name="reason" value="order"> Order Status Update<br><br>
+        Message:<br><br>
+        <textarea name="message" rows="10" cols="30"></textarea>
+            <br><br>
+            <button type="button">Reset </button>
+            <button type="button">Submit</button>
+    </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+        <a href = "index.html">
+            <img src="logo.PNG" alt="HTML5 Icon" style="width:50px;height:50px;">
+            <div class="tooltip">Home
+                <span class="Click here to return to the home page."></span>
+            </div>
+        </a>
+    </div>
 </body>
 </html>
