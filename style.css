@@ -1,0 +1,42 @@
+head {
+    text-align: center;
+    font-family: "Segoe Script", Times, serif;
+    }
+h1  {
+    font-size: 500%;
+    text-shadow: 2px 2px #FF00FF;}
+  body {
+      background-color: #d18ff0;
+      text-align: center;
+      font-family: "Segoe Script", Times, serif;
+      color: white;
+       }
+a:link, a:visited {
+    background-color: 	#FFB6C1;
+    color: white;
+    text-shadow: 1px 1px #FF00FF;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+a:hover, a:active {
+    background-color: 	#FF00FF;
+}
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    background-color: #FFB6C1;
+    padding: 5px;
+    margin-left: 95px;
+}
+th {
+    text-align: left;
+}
+td {
+    text-align: center;
+}
