@@ -29,11 +29,15 @@
 <meta charset=”UTF-8”>
 <body>
 <div class="clear">
-<br>
-<br>
+    <script src="myScript.js"></script>
+    <h4 id="demo"></h4>
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toDateString();
+    </script>
     <h2> Contact Us </h2>
         <p>Please use the form below to contact us.<br>  We will reply with email within one business day.<br><br>
-    <form action="">
+    <form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
         First name:<br>
         <input type="text" name="firstname"><br><br>
         Last name:<br>
@@ -54,6 +58,14 @@
     </div>
 <br>
 <br>
+<br>
+<br>
+<br>
+<p id="demo"></p>
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+</script><br>
 <br>
 </body>
 </html>
