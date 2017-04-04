@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
+
     <div class="relative">
         <title>The Cake Corner</title>
         <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:65px; margin-left:75px; width:100px;height:100px;">
@@ -29,8 +30,11 @@
 <meta charset=”UTF-8”>
 <body>
 <div class="clear">
-    <br>
-    <br>
+    <h4 id="demo"></h4>
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toDateString();
+    </script>
     <h2> Birthday Cakes </h2>
 <p>
     We provide birthday cakes any many different styles.  You can choose from one to  <br>
@@ -43,9 +47,36 @@
 <br>
 <br>
 <table>
+    <img id="bdaysheet" src="bdaysheet.jpg" alt="Sheet Cake" style="float:right;margin-right: 95px;width:100px;height:100px;">
+    <div id="myModal" class="modal">
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <script src="myScript.js"></script>
     <h3> Sheet Cakes </h3>
     <tr>
-        <img src="bdaysheet.jpg" alt="Sheet Cake" style="float:right;margin-right: 95px;width:100px;height:100px;">
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById('bdaysheet');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
         <th> Size </th>
         <td> 1/4 sheet </td>
         <td> 1/2 sheet </td>
@@ -141,6 +172,15 @@
                     </tr>
                 </table>
 <br>
+<br>
+<br>
+<br>
+<br>
+<p id="demo"></p>
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+</script>
 <br>
 <br>
                </body>

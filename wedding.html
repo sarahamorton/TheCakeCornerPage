@@ -29,8 +29,11 @@
 <meta charset=”UTF-8”>
 <body>
 <div class="clear">
-<br>
-<br>
+    <h4 id="demo"></h4>
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toDateString();
+    </script>
 <h2> Wedding Cakes </h2>
 <p>
     I would love to meet with you to chat about your big day in order to customize a cake <br>
@@ -44,9 +47,14 @@
 <br>
 <br>
     <table>
+        <script src="myScript.js"></script>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+        <img id="wedround" src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;">
     <h3> Round Tiered Cakes </h3>
     <tr>
-        <img src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;">
         <th> Size </th>
         <td> 6"/8" </td>
         <td> 8"/10" </td>
@@ -159,6 +167,15 @@
         </tr>
     </table>
 <br>
+<br>
+<br>
+<br>
+<br>
+<p id="demo"></p>
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+</script>
 <br>
 <br>
     </body>
