@@ -25,9 +25,9 @@ h4  {
     padding: 2%;
 }
 div.relative{
-    width: 85%;
+    width: 100%;
     height:250px;
-    float: right;
+
     padding:0;
     background-color: white;
     margin: 0;
@@ -88,6 +88,67 @@ td {text-align: center;}
 img{border-radius: 10%;}
 
 form{margin-left: 15%;}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #dfecdf;
+    color: #808080;
+    font-family: "Bell MT", Times, serif;
+    padding: 10px 16px;
+    width: 85%;
+    font-size: 125%;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #FAEBD7;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: fixed;
+    display: block;
+    list-style-type: none;
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: #fca59c;
+    font-size: 150%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 85%;
+    margin-left: 7%;
+    border-radius: 5%;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #808080;
+    font-family: "Bell MT", Times, serif;
+    font-size: 80%;
+    width: 85%;
+    padding: 10px 16px;
+    display: inline-block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #FAEBD7;
+    border-radius: 5%;
+    width: inherit;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 #wedround {
     border-radius: 5px;
