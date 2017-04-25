@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="myScript.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css">
-    <div class="relative">
-    <title>The Cake Corner</title>
-    <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:65px; margin-left:75px; width:100px;height:100px;">
-    <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:65px; margin-right:75px; width:100px;height:100px;">
-    <h1><b>
-        The Cake Corner
-    </b></h1>
+    <div class="headcontainer">
+        <title>The Cake Corner</title>
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:40px; margin-left:75px; width:100px;height:100px;">
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:40px; margin-right:75px; width:100px;height:100px;">
+        <h1><b>
+            The Cake Corner
+        </b></h1>
     </div>
-        <div class="dropdown">
-            <br>
-            <br>
+    <div class="dropdown w3-sidebar w3-bar-block w3-#fca59c" style="margin-left: 0; height: 100%">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
                 <a href="birthday.html">Birthday Cakes</a>
@@ -36,27 +36,83 @@
         We hope to hear from you soon! <br>
 </p>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="slideshow-container">
+        <div class="mySlides" id="fade">
+            <img src="storefront.jpg" style="width:350px; height: 350px;">
+        </div>
+
+        <div class="mySlides" id="fade">
+            <img src="inside2.jpg" style="width:350px; height: 350px;">
+        </div>
+
+        <div class="mySlides" id="fade">
+            <img src="cake2.jpg" style="width:350px; height: 350px;">
+        </div>
+
+        <div class="mySlides" id="fade">
+            <img src="cake.jpg" style="width:350px; height: 350px;">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
     <br>
-<br>
-<br>
-<br>
-<br>
-<div>
-    <img src="storefront.jpg" alt="HTLM5 Icon" style="width:200px;height:200px;margin-left:15%;">
-    <img src="inside2.jpg" alt="HTML5 Icon" style="width:200px;height:200px;">
-    <img src="cake2.jpg" alt="HTML5 Icon" style="width:200px;height:200px;">
-    <img src="cake.jpg" alt="HTML5 Icon" style="width:200px;height:200px;">
-</div>
+
+    <div style="margin-left: 15%; text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
     <br>
-<br>
-<br>
-<br>
-<p id="demo"></p>
-<script>
-    var d = new Date();
-    document.getElementById("demo").innerHTML = d.toDateString();
-</script>
     <br>
     <br>
+    <br>
+    </div>
 </body>
 </html>

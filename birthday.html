@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <div class="relative">
+    <div class="headcontainer">
         <title>The Cake Corner</title>
-        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:65px; margin-left:75px; width:100px;height:100px;">
-        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:65px; margin-right:75px; width:100px;height:100px;">
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:40px; margin-left:75px; width:100px;height:100px;">
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:40px; margin-right:75px; width:100px;height:100px;">
         <h1><b>
             The Cake Corner
         </b></h1>
-    </div>
-    <div class="dropdown">
-        <br>
-        <br>
+        </div>
+    <div class="dropdown w3-sidebar w3-bar-block" style="margin-left: 0; height: 100%">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
             <a href="index.html">Home</a>
@@ -20,109 +18,83 @@
             <a href="contactus.html">Contact Us</a>
         </div>
     </div>
+    <script src="myScript.js"></script>
 </head>
 <meta charset=”UTF-8”>
 <body>
-<div class="clear">
+<div class="content">
     <h4 id="demo"></h4>
     <script>
         var d = new Date();
         document.getElementById("demo").innerHTML = d.toDateString();
     </script>
     <h2> Birthday Cakes </h2>
-<p>
+    <p>
     We provide birthday cakes any many different styles.  You can choose from one to  <br>
     three tiers and how elaborate the decorations will be.  We can decorate the cake <br>
     to you specifications, anywhere from character theme for the little ones,  <br>
     to more trendy, or traditional.  Don't forget to check out our flavors page to <br>
     see a list of cake, frosting, and filling flavors!  <br>
 </p>
-</div>
 <br>
 <br>
-<table>
-    <img id="bdaysheet" src="bdaysheet.jpg" alt="Sheet Cake" style="float:right;margin-right: 95px;width:100px;height:100px;">
-    <div id="myModal" class="modal">
-        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-        <img class="modal-content" id="img01">
-    </div>
-    <script src="myScript.js"></script>
-    <h3> Sheet Cakes </h3>
-    <tr>
-        <script>
-            // Get the modal
-            var modal = document.getElementById('myModal');
-
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('bdaysheet');
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        </script>
-        <th> Size </th>
-        <td> 1/4 sheet </td>
-        <td> 1/2 sheet </td>
-        <td> full sheet </td>
-    </tr>
-    <tr>
-        <th> Servings </th>
-        <td> 20 </td>
-        <td> 40 </td>
-        <td> 80 </td>
-    </tr>
-    <tr>
-        <th> Starting Price </th>
-        <td> $20.00 </td>
-        <td> $30.00 </td>
-        <td> $40.00 </td>
-    </tr>
-</table>
     <table>
+        <script src="myScript.js"></script>
+        <h3> Sheet Cakes </h3>
+        <tr>
+            <th> Size</th>
+            <td> 1/4 sheet</td>
+            <td> 1/2 sheet</td>
+            <td> full sheet</td>
+            <td rowspan="3"><img id="bdaysheet" src="bdaysheet.jpg" alt="Sheet Cake"style="width:100px;height:100px;"></td>
+        </tr>
+        <tr>
+            <th> Servings</th>
+            <td> 20</td>
+            <td> 40</td>
+            <td> 80</td>
+        </tr>
+        <tr>
+            <th> Starting Price</th>
+            <td> $20.00</td>
+            <td> $30.00</td>
+            <td> $40.00</td>
+        </tr>
+        <table/>
+        <table>
         <h3> Round Three-Layer Cakes </h3>
         <tr>
-            <img src="bdaylayer.jpg" alt="Round Cake" style="float:right;margin-right: 95px;width:100px;height:100px;">
-            <th> Size </th>
-            <td> 6" </td>
-            <td> 8" </td>
-            <td> 10" </td>
-            <td> 12" </td>
+            <th> Size</th>
+            <td> 6"</td>
+            <td> 8"</td>
+            <td> 10"</td>
+            <td> 12"</td>
+            <td rowspan="3"><img src="bdaylayer.jpg" alt="Round Cake" style="width:100px;height:100px;"></td>
         </tr>
         <tr>
-            <th> Portions </th>
-            <td> 10 </td>
-            <td> 15-20 </td>
-            <td> 25-30 </td>
-            <td> 35-40 </td>
+            <th> Portions</th>
+            <td> 10</td>
+            <td> 15-20</td>
+            <td> 25-30</td>
+            <td> 35-40</td>
         </tr>
         <tr>
-            <th> Starting Price </th>
-            <td> $15.00 </td>
-            <td> $20.00 </td>
-            <td> $25.00 </td>
-            <td> $30.00 </td>
+            <th> Starting Price</th>
+            <td> $15.00</td>
+            <td> $20.00</td>
+            <td> $25.00</td>
+            <td> $30.00</td>
         </tr>
     </table>
-        <table>
+    <table>
            <h3> Tiered Cakes  </h3>
             <tr>
-                <img src="bdaytier.jpg" alt="Tiered Cake" style="float:right;margin-right: 95px;width:100px;height:100px;">
                 <th> Size </th>
                 <td> 6"/8" </td>
                 <td> 8"/10" </td>
                 <td> 6"/8"/10" </td>
                 <td> 8"/10"/12" </td>
+                <td rowspan="3"><img src="bdaytier.jpg" alt="Tiered Cake" style="95px;width:100px;height:100px;"></td>
             </tr>
             <tr>
                 <th> Portions </th>
@@ -142,9 +114,9 @@
             <table>
                 <h3> Sculpted Cakes </h3>
                 <tr>
-                    <img src="bdaysculpt.jpg" alt="Sculpted Cake" style="float:right;margin-right:420px;width:100px;height:100px;">
                     <th> Size </th>
                     <td> varies </td>
+                    <td rowspan="2"><img src="bdaysculpt.jpg" alt="Sculpted Cake" style="width:100px;height:100px;"></td>
                 </tr>
                 <tr>
                     <th> Starting Price </th>
@@ -154,10 +126,10 @@
                 <table>
                     <h3> Cupcakes </h3>
                     <tr>
-                        <img src="bdaycupcake.jpg" alt="Cupcake" style= "float:right;margin-right:420px;width:100px;height:100px;">
                         <th> Size </th>
                         <td> standard </td>
                         <td> jumbo </td>
+                        <td rowspan="3"><img src="bdaycupcake.jpg" alt="Cupcake" style= "width:100px;height:100px;"></td>
                     </tr>
                     <tr>
                         <th> Starting Price </th>
@@ -177,5 +149,6 @@
 </script>
 <br>
 <br>
+</div>
                </body>
 </html>
