@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="myScript.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <div class="relative">
+    <div class="headcontainer">
         <title>The Cake Corner</title>
-        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:65px; margin-left:75px; width:100px;height:100px;">
-        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:65px; margin-right:75px; width:100px;height:100px;">
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:left; margin-top:40px; margin-left:75px; width:100px;height:100px;">
+        <img src="newlogo.jpeg" alt="HTML5 Icon" style="float:right; margin-top:40px; margin-right:75px; width:100px;height:100px;">
         <h1><b>
             The Cake Corner
         </b></h1>
     </div>
-    <div class="dropdown">
-        <br>
-        <br>
-        <button class="dropbtn">Menu</button>
+    <div class="dropdown w3-sidebar w3-bar-block" style="margin-left: 0; height: 100%">
+    <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
             <a href="index.html">Home</a>
             <a href="birthday.html">Birthday Cakes</a>
@@ -41,15 +40,9 @@
     </div>
 <br>
 <br>
-    <table>
-
-        <div id="myModal" class="modal">
-            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-            <img class="modal-content" id="img01">
-        </div>
-        <img id="wedround" src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;">
-    <h3> Round Tiered Cakes </h3>
-    <tr>
+<table>
+        <h3> Round Tiered Cakes </h3>
+           <tr>
         <th> Size </th>
         <td> 6"/8" </td>
         <td> 8"/10" </td>
@@ -57,6 +50,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
+        <td rowspan="3"><img id="wedround" src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 40 </td>
@@ -76,10 +70,13 @@
         <td> $440.00 </td>
     </tr>
 </table>
+<div id="myModal" class="modal">
+    <span class="close"onclick="document.getElementById('myModal').style.display='none'">&times;>x</span>
+    <img class="modal-content" id="img01">
+</div>
 <table>
     <h3> Square Tiered Cakes </h3>
     <tr>
-        <img src="squarewedding.jpg" alt="Square Tiered Cake" style="float:right;margin-right:5%;width:100px;height:100px;">
         <th> Size </th>
         <td> 6"/8" </td>
         <td> 8"/10" </td>
@@ -87,6 +84,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
+        <td rowspan="3"><img src="squarewedding.jpg" alt="Square Tiered Cake" style="width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 50 </td>
@@ -106,10 +104,10 @@
         <td> $560.00 </td>
     </tr>
 </table>
+
 <table>
     <h3> Topsy Turvy Cakes  </h3>
     <tr>
-        <img src="topsywedding.jpg" alt="Topsy Turvy Cake" style="float:right;margin-right:5%;width:100px;height:100px;">
         <th> Size </th>
         <td> 6"/8" </td>
         <td> 8"/10" </td>
@@ -117,6 +115,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
+        <td rowspan="3"><img src="topsywedding.jpg" alt="Topsy Turvy Cake" style="width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 40 </td>
@@ -138,9 +137,9 @@
 <table>
     <h3> Groom's Cake </h3>
     <tr>
-        <img src="groomwedding.jpg" alt="Groom's Cake" style="float:right;margin-right:45%;width:100px;height:100px;">
         <th> Size </th>
         <td> varies </td>
+        <td rowspan="2"><img src="groomwedding.jpg" alt="Groom's Cake" style="width:100px;height:100px;"></td>
     </tr>
     <tr>
         <th> Starting Price </th>
@@ -150,10 +149,10 @@
 <table>
         <h3> Cupcakes </h3>
         <tr>
-            <img src="cupcakewedding.jpg"alt="Cupcake"style="float:right;margin-right:45%;width:100px;height:100px;">
             <th> Size </th>
             <td> standard </td>
             <td> jumbo </td>
+            <td rowspan="2"><img src="cupcakewedding.jpg"alt="Cupcake"style:width:100px;height:100px;"></td>
         </tr>
         <tr>
             <th> Starting Price </th>
@@ -163,16 +162,20 @@
     </table>
 <br>
 <br>
-<br>
-<br>
-<br>
-<p id="demo"></p>
 <script>
-    var d = new Date();
-    document.getElementById("demo").innerHTML = d.toDateString();
+    var modal = document.getElementById('myModal');
+    var img = document.getElementById('wedround');
+    var modalImg = document.getElementById("img01");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 </script>
-<br>
-<br>
-<script src="myScript.js"></script>
     </body>
 </html>
+
+-
