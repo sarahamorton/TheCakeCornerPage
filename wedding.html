@@ -50,7 +50,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
-        <td rowspan="3"><img id="wedround" src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;"></td>
+        <td rowspan="3"><img id="wedround" class="wedModal" src="roundwedding.jpg" alt="Round Tiered Cake" style="float:right; margin-right: 5%; width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 40 </td>
@@ -70,10 +70,6 @@
         <td> $440.00 </td>
     </tr>
 </table>
-<div id="myModal" class="modal">
-    <span class="close"onclick="document.getElementById('myModal').style.display='none'">&times;>x</span>
-    <img class="modal-content" id="img01">
-</div>
 <table>
     <h3> Square Tiered Cakes </h3>
     <tr>
@@ -84,7 +80,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
-        <td rowspan="3"><img src="squarewedding.jpg" alt="Square Tiered Cake" style="width:100px;height:100px;"></td>
+        <td rowspan="3"><img id="wedsquare" class="wedModal" src="squarewedding.jpg" alt="Square Tiered Cake" style="width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 50 </td>
@@ -104,7 +100,6 @@
         <td> $560.00 </td>
     </tr>
 </table>
-
 <table>
     <h3> Topsy Turvy Cakes  </h3>
     <tr>
@@ -115,7 +110,7 @@
         <td> 8"/10"/12" </td>
         <td> 6"/8"/10"/12" </td>
         <td> 6"/8"/10"/12"/14" </td>
-        <td rowspan="3"><img src="topsywedding.jpg" alt="Topsy Turvy Cake" style="width:100px;height:100px;"></td>
+        <td rowspan="3"><img id="wedtopsy" class="wedModal" src="topsywedding.jpg" alt="Topsy Turvy Cake" style="width:100px;height:100px;"></td>
     <tr>
         <th> Servings </th>
         <td> 40 </td>
@@ -139,7 +134,7 @@
     <tr>
         <th> Size </th>
         <td> varies </td>
-        <td rowspan="2"><img src="groomwedding.jpg" alt="Groom's Cake" style="width:100px;height:100px;"></td>
+        <td rowspan="2"><img id="wedgroom" class="wedModal" src="groomwedding.jpg" alt="Groom's Cake" style="width:100px;height:100px;"></td>
     </tr>
     <tr>
         <th> Starting Price </th>
@@ -152,7 +147,7 @@
             <th> Size </th>
             <td> standard </td>
             <td> jumbo </td>
-            <td rowspan="2"><img src="cupcakewedding.jpg"alt="Cupcake"style:width:100px;height:100px;"></td>
+            <td rowspan="2"><img id="wedcup" class="wedModal" src="cupcakewedding.jpg"alt="Cupcake"style:width:100px;height:100px;"></td>
         </tr>
         <tr>
             <th> Starting Price </th>
@@ -160,20 +155,66 @@
             <td> $2.75 </td>
         </tr>
     </table>
+<div id="myModal" class="modal">
+    <span class="close"onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
 <br>
-<br>
-<script>
-    var modal = document.getElementById('myModal');
-    var img = document.getElementById('wedround');
-    var modalImg = document.getElementById("img01");
-    img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+<script>// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('wedround');
+var img2 = document.getElementById('wedsquare');
+var img3 = document.getElementById('wedtopsy');
+var img4 = document.getElementById('wedgroom');
+var img5 = document.getElementById('wedcup');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText1.innerHTML = this.alt;
+}
+
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 </script>
     </body>
 </html>
