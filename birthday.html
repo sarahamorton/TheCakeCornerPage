@@ -46,7 +46,7 @@
             <td> 1/4 sheet</td>
             <td> 1/2 sheet</td>
             <td> full sheet</td>
-            <td rowspan="3"><img id="bdaysheet" src="bdaysheet.jpg" alt="Sheet Cake"style="width:100px;height:100px;"></td>
+            <td rowspan="3"><img id="bdaysheet" class="bdayModal" src="bdaysheet.jpg" alt="Sheet Cake"style="width:100px;height:100px;"></td>
         </tr>
         <tr>
             <th> Servings</th>
@@ -69,7 +69,7 @@
             <td> 8"</td>
             <td> 10"</td>
             <td> 12"</td>
-            <td rowspan="3"><img src="bdaylayer.jpg" alt="Round Cake" style="width:100px;height:100px;"></td>
+            <td rowspan="3"><img id="bdaylayer" class="bdayModal" src="bdaylayer.jpg" alt="Round Cake" style="width:100px;height:100px;"></td>
         </tr>
         <tr>
             <th> Portions</th>
@@ -94,7 +94,7 @@
                 <td> 8"/10" </td>
                 <td> 6"/8"/10" </td>
                 <td> 8"/10"/12" </td>
-                <td rowspan="3"><img src="bdaytier.jpg" alt="Tiered Cake" style="95px;width:100px;height:100px;"></td>
+                <td rowspan="3"><img id="bdaytier" class="bdayModal" src="bdaytier.jpg" alt="Tiered Cake" style="95px;width:100px;height:100px;"></td>
             </tr>
             <tr>
                 <th> Portions </th>
@@ -116,7 +116,7 @@
                 <tr>
                     <th> Size </th>
                     <td> varies </td>
-                    <td rowspan="2"><img src="bdaysculpt.jpg" alt="Sculpted Cake" style="width:100px;height:100px;"></td>
+                    <td rowspan="2"><img id="bdaysculpt" class="bdayModal" src="bdaysculpt.jpg" alt="Sculpted Cake" style="width:100px;height:100px;"></td>
                 </tr>
                 <tr>
                     <th> Starting Price </th>
@@ -129,7 +129,7 @@
                         <th> Size </th>
                         <td> standard </td>
                         <td> jumbo </td>
-                        <td rowspan="3"><img src="bdaycupcake.jpg" alt="Cupcake" style= "width:100px;height:100px;"></td>
+                        <td rowspan="3"><img id="bdaycupcake" class="bdayModal" src="bdaycupcake.jpg" alt="Cupcake" style= "width:100px;height:100px;"></td>
                     </tr>
                     <tr>
                         <th> Starting Price </th>
@@ -137,18 +137,67 @@
                         <td> $2.75 </td>
                     </tr>
                 </table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p id="demo"></p>
-<script>
-    var d = new Date();
-    document.getElementById("demo").innerHTML = d.toDateString();
-</script>
-<br>
-<br>
-</div>
-               </body>
+
+        <div id="myModal" class="modal">
+            <span class="close"onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <br>
+        <script>// Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img1 = document.getElementById('bdaysheet');
+        var img2 = document.getElementById('bdaylayer');
+        var img3 = document.getElementById('bdaytier');
+        var img4 = document.getElementById('bdaysculpt');
+        var img5 = document.getElementById('bdaycupcake');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        img1.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText1.innerHTML = this.alt;
+        }
+
+        img2.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        img3.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        img4.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        img5.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        </script>
+</body>
 </html>
